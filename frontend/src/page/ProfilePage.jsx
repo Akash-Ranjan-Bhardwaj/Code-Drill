@@ -92,7 +92,7 @@ const ProfilePage = () => {
         {/* Sidebar */}
         <div className="w-64 hidden lg:block sticky top-6 h-fit bg-base-100 shadow-md rounded-xl p-6">
           <button
-            onClick={() => (window.location.href = "http://localhost:5173/")}
+            onClick={() => (window.location.href = "https://code-drill-frontend.onrender.com/")}
             className="btn btn-sm btn-outline btn-primary w-full mb-4"
           >
             ← Back to Home
