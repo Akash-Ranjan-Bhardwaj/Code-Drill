@@ -40,12 +40,13 @@ export const register = async (req, res) => {
         });
 
         // Set the JWT token as a cookie in the response
-        res.cookie("jwt", token, {
-            httpOnly: true, // Cannot be accessed via JS
-            sameSite: "strict", // Prevent CSRF
-            secure: process.env.NODE_ENV !== "development", // Only send on HTTPS in production
-            maxAge: 1000 * 60 * 60 * 24 * 7 // 7 days
+       res.cookie("jwt", token, {
+          httpOnly: true,
+          sameSite: "None",         // ✅ allow cross-site cookies
+          secure: true,             // ✅ ensure it's sent only over HTTPS
+          maxAge: 1000 * 60 * 60 * 24 * 7 // 7 days
         });
+
 
         // Respond with created user info (excluding password)
         res.status(201).json({
@@ -104,11 +105,12 @@ export const login = async (req, res) => {
 
         // Set token in HTTP-only cookie
         res.cookie("jwt", token, {
-            httpOnly: true,
-            sameSite: "strict",
-            secure: process.env.NODE_ENV !== "development",
-            maxAge: 1000 * 60 * 60 * 24 * 7 // 7 days
+          httpOnly: true,
+          sameSite: "None",         // ✅ allow cross-site cookies
+          secure: true,             // ✅ ensure it's sent only over HTTPS
+          maxAge: 1000 * 60 * 60 * 24 * 7 // 7 days
         });
+
 
         // Respond with user info
         res.status(200).json({
@@ -138,10 +140,11 @@ export const logout = async (req, res) => {
     try {
         // Clear the JWT cookie
         res.clearCookie("jwt", {
-            httpOnly: true,
-            sameSite: "strict",
-            secure: process.env.NODE_ENV !== "development",
+          httpOnly: true,
+          sameSite: "None",
+          secure: true,
         });
+
 
         // Respond with success message
         res.status(200).json({
