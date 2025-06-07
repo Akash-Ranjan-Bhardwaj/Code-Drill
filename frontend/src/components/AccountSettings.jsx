@@ -78,8 +78,8 @@ const AccountSettings = () => {
   return (
     <div className="w-full max-w-4xl mx-auto">
       <div className="mb-8">
-        <h2 className="text-3xl font-bold text-white mb-2">Account Settings</h2>
-        <p className="text-gray-400">Manage your account preferences and security settings</p>
+          <h2 className="text-3xl font-bold text-white mb-2">Account Settings</h2>
+          <p className="text-gray-400">Manage your account preferences and security settings. (Note: This section is still under development and will be fully functional soon.)</p>
       </div>
 
       {/* Tab Navigation */}
