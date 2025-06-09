@@ -41,9 +41,9 @@ export const register = async (req, res) => {
 
         // Set the JWT token as a cookie in the response
         res.cookie("jwt", token, {
-            httpOnly: true, // Cannot be accessed via JS
-            sameSite: "strict", // Prevent CSRF
-            secure: process.env.NODE_ENV !== "development", // Only send on HTTPS in production
+            httpOnly: true,
+              secure: true, // only over HTTPS
+              sameSite: "None", // Only send on HTTPS in production
             maxAge: 1000 * 60 * 60 * 24 * 7 // 7 days
         });
 
@@ -104,9 +104,9 @@ export const login = async (req, res) => {
 
         // Set token in HTTP-only cookie
         res.cookie("jwt", token, {
-            httpOnly: true,
-            sameSite: "strict",
-            secure: process.env.NODE_ENV !== "development",
+           httpOnly: true,
+              secure: true, // only over HTTPS
+          sameSite: "None",
             maxAge: 1000 * 60 * 60 * 24 * 7 // 7 days
         });
 
