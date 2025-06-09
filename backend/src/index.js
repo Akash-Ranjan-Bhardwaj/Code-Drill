@@ -15,7 +15,7 @@ const app = express();
 
 app.use(
   cors({
-    origin: "https://code-drill-frontend.onrender.com/",
+    origin: "https://code-drill-frontend.onrender.com",
     credentials: true,
   })
 );
