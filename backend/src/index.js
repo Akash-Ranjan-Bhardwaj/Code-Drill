@@ -10,7 +10,7 @@ import submissionRoutes from "./routes/submission.routes.js";
 import playlistRoutes from "./routes/playlist.routes.js";
 import aiRoute from "./routes/aiRoute.js";
 dotenv.config();
-
+app.use(express.static(path.join(__dirname, "client", "dist")));
 const app = express();
 
 app.use(
