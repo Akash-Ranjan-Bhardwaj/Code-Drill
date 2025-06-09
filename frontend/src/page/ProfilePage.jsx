@@ -92,12 +92,9 @@ const ProfilePage = () => {
       <div className="flex max-w-[1600px] mx-auto gap-6">
         {/* Sidebar */}
         <div className="w-64 hidden lg:block sticky top-6 h-fit bg-base-100 shadow-md rounded-xl p-6">
-          <button
-            onClick={() => (window.location.href = `${frontendURL}/home`)}
-            className="btn btn-sm btn-outline btn-primary w-full mb-4"
-          >
+          <Link to="/home" className="btn btn-sm btn-outline btn-primary w-full mb-4">
             ← Back to Home
-          </button>
+            </Link>
 
           <h2 className="text-xl font-bold mb-4 text-base-content">
             Quick Navigation
