@@ -11,7 +11,7 @@ import Layout from "./layout/Layout";
 import AdminRoute from "./components/AdminRoute";
 import AddProblem from "./page/AddProblem";
 import ProblemPage from "./page/ProblemPage";
-import ProfilePage from "./page/profilePage";
+import ProfilePage from "./page/ProfilePage";
 import LandingPage from "./page/LandingPage";
 
 const App = () => {
